@@ -514,7 +514,7 @@ func (cp *Node) TxSearch(query string, pagePtr *int, perPagePtr *int, orderBy st
 	for i := skipCount; i < skipCount+pageSize; i++ {
 		r := results[i]
 
-		var proof tmtypes.TxProof
+		var proof tmtypes.ShareProof
 		apiResults = append(apiResults, &tmctypes.ResultTx{
 			Hash:     tmtypes.Tx(r.Tx).Hash(),
 			Height:   r.Height,
